@@ -10,7 +10,7 @@ dataset <- subset(read.table("household_power_consumption.txt", header = TRUE, s
 dataset$Date <- as.Date(dataset$Date, "%d/%m/%Y")
 dataset$Time <- strptime(paste(dataset$Date, dataset$Time), "%F %H:%M:%S")
 
-png('ExData_Plotting1-master/plot3.png', width = 480, height = 480, units = "px")
+png('ExData_Plotting1/plot3.png', width = 480, height = 480, units = "px")
 
 plot(dataset$Time,dataset$Sub_metering_1,xlab="", 
 	ylab = "Energy sub metering", type = "l")  

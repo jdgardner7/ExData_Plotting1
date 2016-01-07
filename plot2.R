@@ -10,7 +10,7 @@ dataset <- subset(read.table("household_power_consumption.txt", header = TRUE, s
 dataset$Date <- as.Date(dataset$Date, "%d/%m/%Y")
 dataset$Time <- strptime(paste(dataset$Date, dataset$Time), "%F %H:%M:%S")
 
-png('ExData_Plotting1-master/plot2.png', width = 480, height = 480, units = "px")
+png('ExData_Plotting1/plot2.png', width = 480, height = 480, units = "px")
 
 plot(dataset$Time, dataset$Global_active_power,xlab="", 
 	ylab = "Global Active Power (kilowatts)", type = "l") 
